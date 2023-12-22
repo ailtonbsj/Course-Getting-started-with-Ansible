@@ -31,3 +31,16 @@ ssh-add
 # Hint: Add this alias on .bashrc
 alias ssha='eval $(ssh-agent) && ssh-add'
 ```
+
+## Commands for Ansible
+
+```bash
+# Ping for all machines
+ansible all --key-file ~/.ssh/ansible -i inventory -m ping
+
+# List hosts
+ansible all --list-hosts
+
+# Get informations from hosts
+ansible all -m gather_facts
+```
