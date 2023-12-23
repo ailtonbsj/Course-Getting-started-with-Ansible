@@ -43,4 +43,16 @@ ansible all --list-hosts
 
 # Get informations from hosts
 ansible all -m gather_facts
+
+# Run Ad hoc command against servers
+ansible all -m apt -a update_cache=true --become --ask-become-pass
+
+# Install package with APT
+ansible all -m apt -a name=vim-nox --become --ask-become-pass
+
+# Install latest package with APT
+ansible all -m apt -a "name=vim-nox state=latest" --become --ask-become-pass
+
+# Upgrade all packages with APT
+ansible all -m apt -a "upgrade=dist" --become --ask-become-pass
 ```
