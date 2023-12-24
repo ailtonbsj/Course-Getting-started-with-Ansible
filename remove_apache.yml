@@ -4,19 +4,9 @@
   become: true
   tasks:
 
-  - name: remove apache2 and php packages
+  - name: remove apache and php packages
     apt:
       name:
-        - apache2
-        - libapache2-mod-php
+        - {{ apache_pkg }}
+        - {{ php_pkg }}
       state: absent
-    when: ansible_distribution in ["Debian", "Ubuntu"]
-  
-  - name: remove httpd and php packages
-    apt:
-      name:
-        - httpd
-        - php
-      state: absent
-    when: ansible_distribution == "CentOS"
-
