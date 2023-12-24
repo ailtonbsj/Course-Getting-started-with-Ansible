@@ -55,4 +55,7 @@ ansible all -m apt -a "name=vim-nox state=latest" --become --ask-become-pass
 
 # Upgrade all packages with APT
 ansible all -m apt -a "upgrade=dist" --become --ask-become-pass
+
+# Run a playbook
+ansible-playbook --ask-become-pass install_apache.yml
 ```
