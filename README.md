@@ -58,4 +58,10 @@ ansible all -m apt -a "upgrade=dist" --become --ask-become-pass
 
 # Run a playbook
 ansible-playbook --ask-become-pass install_apache.yml
+
+# List tags
+ansible-playbook --list-tags main.yml
+
+# Run tag
+ansible-playbook --tags mytag --ask-become-pass main.yml
 ```
