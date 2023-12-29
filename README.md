@@ -1,5 +1,5 @@
 # Getting started with Ansible
-![](https://img.shields.io/badge/status-progress-blue)
+![](https://img.shields.io/badge/status-completed-brightgreen)
 
 <p align="center">
 <img src=".github/logo.png">
